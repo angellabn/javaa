@@ -1,3 +1,5 @@
+
+// import java.util.Arrays;
 import java.util.Scanner;
 //----------------------------------------------------------------------------------------------------------------------
 // 1find sum of array
@@ -48,7 +50,6 @@ import java.util.Scanner;
 //     }
 // }
 
-
 // -----------------------------------------------------------------------------------------------------------
 
 // 2
@@ -76,7 +77,7 @@ import java.util.Scanner;
 //             else{
 //                 max=max;
 //             }
-        
+
 //         }
 //         System.out.println(max);
 //     }
@@ -84,32 +85,88 @@ import java.util.Scanner;
 
 //------------------------------------------------------------------------------------------------------------
 
+//3
+// public class interview_imp{
+//     public static void main(String[] args) {
+//         Scanner sc= new Scanner(System.in);
+
+//         System.out.println("size of array");
+//         int n=sc.nextInt();
+//         int s[]= new int[n];
+//         System.out.println("enter "+" elements in array");
+//         for(int i=0;i<n;i++){
+//             s[i]=sc.nextInt();
+//         }
+//         System.out.println("Array: ");
+//         for(int num=0;num<s.length;num++){
+//             System.out.println(s[num]);
+//         }
+
+//         System.out.println("Reverse of array: ");
+//         for(int j=0;j<s.length/2;j++){
+//             int temp=s[j];
+//             s[j]=s[s.length-1-j];
+//             s[s.length-1-j]=temp;
+//         }
+//         for(int k:s){
+//             System.out.println(k);
+//         }
+
+//     }
+
+// }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+//4
+
+// public class interview_imp {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("enter size of array");
+//         int n = sc.nextInt();
+//         int[] s = new int[n];
+//         System.out.println("enter " + n + " elements");
+//         for (int i = 0; i < n; i++) {
+//             s[i] = sc.nextInt();
+//         }
+//         System.out.println("Entered elements");
+//         for (int j : s) {
+//             System.out.println(j);
+//         }
+
+//         for (int k = 0; k < s.length-1; k++) {
+//             for (int m = 0; m < s.length - 1 - k; m++) {
+//                 if (s[m] > s[m + 1]) {
+//                     int temp = s[m];
+//                     s[m] = s[m + 1];
+//                     s[m + 1] = temp;
+//                 }
+//             }
+//         }
+//         System.out.println("Sorted array: ");
+//         for (int h : s) {
+//             System.out.println(h);
+//         }
+
+//     }
+// }
+//---------------------------------------------------------------------------------------------------------------------------
+
+
+//6
+
 public class interview_imp{
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-
-        System.out.println("size of array");
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter size of array");
         int n=sc.nextInt();
-        int s[]= new int[n];
-        System.out.println("enter "+" elements in array");
-        for(int i=0;i<n;i++){
-            s[i]=sc.nextInt();
-        }
-        System.out.println("Array: ");
-        for(int num=0;num<s.length;num++){
-            System.out.println(s[num]);
-        }
-
-        System.out.println("Reverse of array: ");
-        for(int j=0;j<s.length/2;j++){
-            int temp=s[j];
-            s[j]=s[s.length-1-j];
-            s[s.length-1-j]=temp;
+        char s[]=new char[n];
+        System.out.println("Enter "+ n+" elemts");
+        for(char i=0;i<n;i++){
+            s[i]=sc.next().charAt(0);
         }
         for(int k:s){
             System.out.println(k);
         }
-
     }
-
 }
