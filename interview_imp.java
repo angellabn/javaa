@@ -158,15 +158,17 @@ import java.util.Scanner;
 public class interview_imp{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter size of array");
-        int n=sc.nextInt();
-        char s[]=new char[n];
-        System.out.println("Enter "+ n+" elemts");
-        for(char i=0;i<n;i++){
-            s[i]=sc.next().charAt(0);
+        System.out.println("enter string ");
+        String s=sc.nextLine();
+        int freq[]=new int[256];
+        for(char c:s.toCharArray()){
+            freq[c]++;
         }
-        for(int k:s){
-            System.out.println(k);
+        for(int i=0;i<256;i++){
+            if(freq[i]>1){
+                System.out.println((char)i+ " is repeated "+freq[i]+" times");
+            }
+            
         }
     }
 }
