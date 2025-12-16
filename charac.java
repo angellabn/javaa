@@ -19,7 +19,7 @@ public class charac{
         System.out.println("compare(A,a)"+ Character.compare(ch1,ch2));
         Character obj=Character.valueOf(ch1);
         System.out.println("character object": +obj);
-        char printitLive
+        
 
     }
 }

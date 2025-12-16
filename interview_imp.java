@@ -1,3 +1,4 @@
+
 // import java.util.Arrays;
 import java.util.Scanner;
 //----------------------------------------------------------------------------------------------------------------------
@@ -8,6 +9,10 @@ import java.util.Scanner;
 
 // 5reverse of char array
 // 6no. of chars in a string
+
+//7vowel or consonant
+//8 lower or uppercase
+//9letter,number,symbols
 
 //-----------------------------------------------------------------------------------------------------------
 
@@ -151,23 +156,99 @@ import java.util.Scanner;
 // }
 //---------------------------------------------------------------------------------------------------------------------------
 
-
 //6
 
+// public class interview_imp{
+//     public static void main(String[] args) {
+//         Scanner sc=new Scanner(System.in);
+//         System.out.println("enter string ");
+//         String s=sc.nextLine();
+//         int freq[]=new int[256];
+//         for(char c:s.toCharArray()){
+//             freq[c]++;
+//         }
+//         for(int i=0;i<256;i++){
+//             if(freq[i]>1){
+//                 System.out.println((char)i+ " is repeated "+freq[i]+" times");
+//             }
+
+//         }
+//     }
+// }
+
+//------------------------------------------------------------------------------------------------------------
+//7
+// public class interview_imp {
+//     public static void main(String[] args) {
+//         char[] vow={'a','e','i','o','u'};
+//         Scanner sc=new Scanner(System.in);
+//         System.out.println("Enter a string");
+//         String input=sc.nextLine();
+//         char[] c=input.toCharArray();
+//         boolean hasVowel=false;
+//         for(char ch:c){
+//             for(char chh:vow){
+//         if(ch==chh){
+//             hasVowel=true;
+//             break;
+//         }
+//         }
+//         if (hasVowel) break;
+// }
+
+//        if(hasVowel){
+//         System.out.println("has vowels");
+//        }
+//        else{
+//         System.out.println("does not contain vowels");
+//        }
+//     }
+// }
+
+//------------------------------------------------------------------------------------------
+//8
+// public class interview_imp{
+//     public static void main(String[] args) {
+//         Scanner sc=new Scanner(System.in);
+//         System.out.println("enter a string");
+//         String s=sc.nextLine();
+//         char[] ch=s.toCharArray();
+//         for(char c:ch){
+//             if(Character.isUpperCase(c)){
+//                 System.out.println("uppercase");
+//             }
+//             else{
+//                 System.out.println("lowercase");
+//             }
+//         }
+//     }
+// }
+
+//----------------------------------------------------------------------------------
+//9
 public class interview_imp{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.println("enter string ");
+        int charac=0;
+        int num=0;
+        int other=0;
+        System.out.println("enter a string");
         String s=sc.nextLine();
-        int freq[]=new int[256];
-        for(char c:s.toCharArray()){
-            freq[c]++;
-        }
-        for(int i=0;i<256;i++){
-            if(freq[i]>1){
-                System.out.println((char)i+ " is repeated "+freq[i]+" times");
+        char[] ch=s.toCharArray();
+        for(char c:ch){
+            if(Character.isAlphabetic(c)){
+                charac++;
             }
-            
+            else if(Character.isDigit(c)){
+                num++;
+            }
+            else{
+                other++;
+            }
         }
+
+        System.out.println("alphabet: "+charac);
+        System.out.println("numerics: "+num);
+        System.out.println("Symbols: "+other);
     }
 }
