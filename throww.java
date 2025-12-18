@@ -5,11 +5,11 @@ public class throww {
         double amount=3000;
         double balance=5000;
 
-        if(amount<balance){
+        if(amount>balance){
             throw new IllegalArgumentException("insufficient balance");
         }
 
         balance-=amount;
-        System.out.println("withdrawl successful. remaining balance"+ balance);
+        System.out.println("withdrawl successful. remaining balance "+ balance);
     }
 }
